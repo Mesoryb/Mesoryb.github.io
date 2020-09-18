@@ -1,0 +1,176 @@
+@charset "UTF-8";
+.topnav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 80px;
+  width: 100%;
+  background: gray;
+  z-index: 5000;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  flex-direction: row;
+}
+
+.menu-btn-mobile {
+  display: none;
+}
+
+.topnav > div > h1 {
+  font: 40px Gotham;
+  font-weight: bold;
+}
+
+.topnav > a {
+  margin-left: 5px;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav > div > * {
+    display: inline-block;
+    margin: 0;
+  }
+
+  .topnav .menu-btn-mobile:before {
+    content: "☰";
+    margin: 0 10px 0 10px;
+    font-size: 40px;
+  }
+
+  .topnav {
+    height: auto;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .topnav > a {
+    display: none;
+  }
+
+  .topnav.open > a {
+    display: block;
+  }
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 80px;
+  width: 100%;
+  background: gray;
+  z-index: 5000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+}
+
+.gallery > div > * {
+  display: block;
+  text-align: center;
+}
+
+.gallery label {
+  font: 10px Gotham;
+  font-style: italic;
+}
+
+.gallery img {
+  transition: transform 0.2s;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.gallery img:hover {
+  transform: scale(1.2);
+}
+
+@media screen and (max-width: 600px) {
+  .gallery {
+    flex-direction: column;
+  }
+}
+.btn-scroll-top {
+  display: none;
+  position: fixed;
+  z-index: 5000;
+  right: 0;
+  bottom: 80px;
+  border: 6px solid;
+  background: gray;
+  border-radius: 101px;
+  margin: 0 10px 10px 0;
+  color: black;
+  text-decoration: none;
+  font-size: 100px;
+}
+
+.btn-scroll-top:before {
+  content: "";
+  display: block;
+  height: 0;
+  width: 0;
+  margin-top: calc(-1.6 * 26%);
+}
+
+.text-with-right-image-responsive, .text-with-left-image-responsive {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.text-with-left-image-responsive img {
+  order: -1;
+}
+
+.text-with-right-image-responsive img {
+  order: 1;
+}
+
+@media screen and (max-width: 600px) {
+  .text-with-right-image-responsive, .text-with-left-image-responsive {
+    flex-direction: column;
+  }
+
+  .text-with-right-image-responsive img, .text-with-left-image-responsive img {
+    order: -1;
+  }
+}
+:target {
+  scroll-margin-top: 80px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.content {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.content p {
+  font: 15px Gotham;
+  font-weight: 400;
+}
+
+.content h1 {
+  font: 60px Gotham;
+  font-weight: bold;
+}
+
+#map {
+  height: 300px;
+  width: 300px;
+  text-align: center;
+  margin: auto !important;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,44 @@
+.topnav
+  position: fixed
+  top: 0
+  left: 0
+  height: $header-height
+  width: 100%
+  background: gray
+  z-index: 5000
+
+  display: flex
+  align-items: center
+  justify-content: left
+  flex-direction: row
+
+.menu-btn-mobile
+  display: none
+
+.topnav > div > h1
+  font: 40px Gotham
+  font-weight: bold
+
+.topnav > a
+  margin-left: 5px
+
+@media screen and (max-width: 600px)
+  .topnav > div > *
+    display: inline-block
+    margin: 0
+
+  .topnav .menu-btn-mobile:before
+    content: "\2630"
+    margin: 0 10px 0 10px
+    font-size: 40px
+
+  .topnav
+    height: auto
+    align-items: flex-start
+    flex-direction: column
+
+  .topnav > a
+    display: none
+
+  .topnav.open > a
+    display: block

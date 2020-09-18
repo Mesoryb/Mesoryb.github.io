@@ -1,0 +1,17 @@
+.text-with-right-image-responsive, .text-with-left-image-responsive
+  display: flex
+  align-items: center
+  flex-direction: row
+
+.text-with-left-image-responsive img
+  order: -1
+
+.text-with-right-image-responsive img
+  order: 1
+
+@media screen and (max-width: 600px)
+  .text-with-right-image-responsive, .text-with-left-image-responsive
+    flex-direction: column
+
+  .text-with-right-image-responsive img, .text-with-left-image-responsive img
+    order: -1

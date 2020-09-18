@@ -1,0 +1,32 @@
+$header-height: 80px
+$footer-height: 80px
+
+@import "topnav"
+@import "footer"
+@import "gallery"
+@import "btn-scroll-top"
+@import text-with-image-responsive
+
+\:target
+  scroll-margin-top: $header-height
+
+html
+  scroll-behavior: smooth
+
+.content
+  margin-top: $header-height
+  margin-bottom: $footer-height
+
+.content p
+  font: 15px Gotham
+  font-weight: 400
+
+.content h1
+  font: 60px Gotham
+  font-weight: bold
+
+#map
+  height: 300px
+  width: 300px
+  text-align: center
+  margin: auto !important

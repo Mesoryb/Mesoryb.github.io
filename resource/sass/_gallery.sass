@@ -1,0 +1,24 @@
+.gallery
+  display: flex
+  flex-direction: row
+
+.gallery > div > *
+  display: block
+  text-align: center
+
+.gallery label
+  font: 10px Gotham
+  font-style: italic
+
+.gallery img
+  transition: transform .2s
+  width: 200px
+  height: 200px
+  margin: 0 auto
+
+.gallery img:hover
+  transform: scale(1.2)
+
+@media screen and (max-width: 600px)
+  .gallery
+    flex-direction: column
